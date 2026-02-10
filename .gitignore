@@ -1,0 +1,19 @@
+# Backend
+backend/target/
+
+# Frontend
+frontend/node_modules/
+frontend/dist/
+frontend/.quasar/
+frontend/.vscode/
+
+# Capacitor
+frontend/android/
+frontend/ios/
+
+# Logs
+*.log
+
+# Env
+.env
+frontend/.env

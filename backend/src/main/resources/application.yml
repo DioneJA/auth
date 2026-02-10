@@ -1,0 +1,24 @@
+server:
+  port: 8080
+
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/involvest
+    username: involvest
+    password: involvest
+    driver-class-name: org.postgresql.Driver
+  jackson:
+    serialization:
+      WRITE_DATES_AS_TIMESTAMPS: false
+
+logging:
+  level:
+    root: INFO
+    com.involvest: DEBUG
+
+security:
+  jwt:
+    issuer: involvest
+    secret: "CHANGE_ME_TO_A_64_CHAR_RANDOM_SECRET_STRING_ABCDEFGHIJKLMNOPQRSTUVWXYZ123456"
+    access-token-minutes: 15
+    refresh-token-days: 30

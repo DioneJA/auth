@@ -1,0 +1,29 @@
+{
+  "name": "involvest-frontend",
+  "version": "1.0.0",
+  "description": "Involvest frontend",
+  "private": true,
+  "scripts": {
+    "dev": "quasar dev",
+    "build": "quasar build",
+    "lint": "eslint . --ext .ts,.vue"
+  },
+  "dependencies": {
+    "@capacitor-community/sqlite": "^6.0.0",
+    "@capacitor/android": "^6.1.0",
+    "@capacitor/core": "^6.1.0",
+    "@capacitor/ios": "^6.1.0",
+    "axios": "^1.6.7",
+    "pinia": "^2.1.7",
+    "quasar": "^2.16.3",
+    "vue": "^3.4.15",
+    "vue-router": "^4.3.0"
+  },
+  "devDependencies": {
+    "@quasar/app-vite": "^1.6.5",
+    "@quasar/extras": "^1.16.9",
+    "@types/node": "^20.11.24",
+    "eslint": "^8.56.0",
+    "typescript": "^5.3.3"
+  }
+}

@@ -1,0 +1,31 @@
+:root {
+  --inv-primary: #0f4c5c;
+  --inv-secondary: #e36414;
+  --inv-accent: #9a031e;
+  --inv-bg: #f6f4f1;
+  --inv-text: #1c1c1c;
+}
+
+body {
+  font-family: "Merriweather", serif;
+  background: var(--inv-bg);
+  color: var(--inv-text);
+}
+
+.inv-card {
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+.inv-hero {
+  background: linear-gradient(135deg, #0f4c5c 0%, #1f7a8c 50%, #bfdbf7 100%);
+  color: #ffffff;
+  border-radius: 18px;
+  padding: 20px;
+}
+
+.inv-section-title {
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
