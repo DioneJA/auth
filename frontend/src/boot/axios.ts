@@ -1,7 +1,8 @@
 import axios from 'axios';
+import { boot } from 'quasar/wrappers';
 import { useAuthStore } from '../stores/auth';
 
-const api = axios.create({
+export const api = axios.create({
   baseURL: import.meta.env.VITE_API_URL || 'http://localhost:8080'
 });
 
@@ -30,4 +31,6 @@ api.interceptors.response.use(
   }
 );
 
-export default api;
+export default boot(({ app }) => {
+  app.config.globalProperties.$api = api;
+});

@@ -1,6 +1,8 @@
 import { createRouter, createWebHistory } from 'vue-router';
 import { useAuthStore } from '../stores/auth';
+import { pinia } from '../stores';
 import MainLayout from '../layouts/MainLayout.vue';
+import AuthLayout from '../layouts/AuthLayout.vue';
 import LoginPage from '../pages/LoginPage.vue';
 import RegisterPage from '../pages/RegisterPage.vue';
 import DashboardPage from '../pages/DashboardPage.vue';
@@ -9,8 +11,14 @@ import TypesPage from '../pages/TypesPage.vue';
 import GoalsPage from '../pages/GoalsPage.vue';
 
 const routes = [
-  { path: '/login', component: LoginPage },
-  { path: '/register', component: RegisterPage },
+  {
+    path: '/auth',
+    component: AuthLayout,
+    children: [
+      { path: 'login', component: LoginPage },
+      { path: 'register', component: RegisterPage }
+    ]
+  },
   {
     path: '/',
     component: MainLayout,
@@ -30,11 +38,11 @@ const router = createRouter({
 });
 
 router.beforeEach((to) => {
-  const auth = useAuthStore();
+  const auth = useAuthStore(pinia);
   if (to.meta.requiresAuth && !auth.isAuthenticated) {
-    return '/login';
+    return '/auth/login';
   }
-  if ((to.path === '/login' || to.path === '/register') && auth.isAuthenticated) {
+  if ((to.path === '/auth/login' || to.path === '/auth/register') && auth.isAuthenticated) {
     return '/';
   }
   return true;

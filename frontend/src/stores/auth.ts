@@ -1,5 +1,5 @@
 import { defineStore } from 'pinia';
-import api from '../boot/axios';
+import { api } from '../boot/axios';
 
 interface AuthState {
   accessToken: string | null;
@@ -70,7 +70,7 @@ export const useAuthStore = defineStore('auth', {
       this.familyId = null;
       this.userId = null;
       localStorage.removeItem(STORAGE_KEY);
-      window.location.href = '/login';
+      window.location.href = '/auth/login';
     }
   }
 });

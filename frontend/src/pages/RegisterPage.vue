@@ -39,5 +39,5 @@ const onSubmit = async () => {
   }
 };
 
-const goLogin = () => router.push('/login');
+const goLogin = () => router.push('/auth/login');
 </script>

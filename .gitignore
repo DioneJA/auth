@@ -1,11 +1,13 @@
 # Backend
 backend/target/
+backend/.idea/
 
 # Frontend
 frontend/node_modules/
 frontend/dist/
 frontend/.quasar/
 frontend/.vscode/
+frontend/yarn.lock
 
 # Capacitor
 frontend/android/

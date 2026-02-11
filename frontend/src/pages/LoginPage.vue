@@ -34,7 +34,7 @@ const onSubmit = async () => {
   }
 };
 
-const goRegister = () => router.push('/register');
+const goRegister = () => router.push('/auth/register');
 </script>
 
 <style scoped>
